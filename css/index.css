@@ -1,0 +1,71 @@
+html{color:#000;}
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,menu,section{margin:0;padding:0;}
+aside,menu,section{display:block;}
+button,section{font-size:12px/1.5;}
+input,textarea{font-size:100%;}
+fieldset,img{border:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
+
+
+.left,.right{display:inline;}
+.left{float:left;}
+.right{float:right;}
+
+
+body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;}
+a {color:rgb(62,188,202);text-decoration:none;outline:none;font-size: 18px}
+a:hover {text-decoration:underline}
+/*
+a:visited {color: rgb(252,157,154)} 没达到预期效果。该变色的没变，不该变的却变了。。*/
+
+h1 {margin-left:50px;margin-top:0px;font-size:25px;font-weight:bold;margin-bottom:25px;color:rgb(250,227,113)}
+h2 {margin-left:50px;margin-top:0px;font-size:22px;font-weight:bold;margin-bottom:25px;color:#C4C4C4}
+h5 {margin-bottom:15px;color:#868686;font-size:14px}
+
+.index-content .aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    max-width: 500px;
+    background:rgb(6,128,67);
+    box-shadow:inset -1px 0 0 rgba(0,0,0,0.3);
+    background-size:cover;
+    background-position:50% 50%;
+}
+.home .aside{
+    background-image:url();
+}
+
+.index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
+
+.index-content .website-list { width: 80%; margin: 0 auto; }
+.index-content .website-list li { margin-bottom:40px; }
+
+.index-content .artical-cate { width:70%; margin:0 auto; }
+.index-content .artical-cate li { display:inline-block; *float:left; zoom:1; font-size:18px; width:32%; cursor:pointer; }
+.index-content .artical-cate li a,
+.index-content .artical-cate li a:visited { display:inline-block; zoom:1; color:#000; width:100%; }
+.index-content .artical-cate li a:hover { text-decoration:none; }
+.index-content .artical-cate li.on span{ color:black; }
+
+.index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
+.index-content #cateBar { display:inline-block; zoom:1; height:3px; background:rgb(147,224,255); position:relative; width:0; }
+
+
+.home-menu { position:fixed; top:415px; left:120px; z-index:5; font-size:0; }
+.home-menu-icon { line-height:38px; padding:0 8px; display:inline-block; color:#fff; font-size:18px;  background:#000; }
+
+.home-touxiang {position:fixed; top:200px; left:100px; z-index:5; font-size:0;} 
+.home-touxiang-icon { border-radius:50%; width:170px;height:198px;padding:0 0px; display:inline-block; color:#fff;  background:#000; background-image: url() ; }
+.home-touxiang-icon img {border-radius:50%; display: inline-block;position: relative;z-index: 1;opacity: 0.9;
+}
+
+.home-follow { margin-left:2px; line-height:38px; padding:0 8px; display:inline-block; color:#fff; font-size:18px; background:#000;  }
+.home-menu-icon:hover,
+.home-follow:hover { color:#fff; text-decoration:blink; }
+.home-contact { color:#fff; margin-top:2px; background:#C2C2BE; padding:8px 0 7px; text-align:center; display:none;}
+.home-contact a { width:30px; display:inline-block; }
+.home-contact img { width:18px; }
+
