@@ -1,1 +1,126 @@
-hello world.
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--
+    * Author: YuXueying
+    -->
+    <meta charset="utf-8" />
+    <title>雨雪音|try2code</title>
+    <meta name="author" content="YuXueying" />
+    <meta name="renderer" content="webkit"> <!--html强制打开为极速模式？-->
+    <meta name="description" content="Xuying's coding space" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,user-scalable=yes">
+    <link href="images/favicon.ico" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" href="css/index.css" type="text/css" >
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  
+    <!-- 
+    <script src="js/analytics.js" type="text/javascript"></script> -->
+	<!-- <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" /> 使得可以通过feed来读取内容，即订阅RSS？-->
+    
+</head>
+<body>
+
+    <div class="home-menu">
+        <div class="home-icon-con">
+            <a class="home-menu-icon" href="/">Find Me</a>
+            <a class="home-follow" href="#" title="Contact Me">+</a>
+        </div>
+        <div class="home-contact">
+            <a href="http://weibo.com/hitomi93" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" width="25"/></a>
+            <a href="http://www.zhihu.com/people/yxuey" target="_blank" style="text-align:center"><img src="http://www.zhihu.com/favicon.ico"  width="22"/></a>
+            <a href="http://github.com/yxuey" target="_blank" style="text-align:  ???  ;"><img src="https://github.com/favicon.ico" width="22"/></a>
+            <a href="https://gitcafe.com/try2code" target="_blank" style="text-align:right"><img src="https://gitcafe.com/favicon.ico"></a>
+        </div>
+    </div>
+    <div class="home-touxiang">
+        <a class="home-touxiang-icon" href="http://yxuey.github.io"><img src="images/touxiang.jpg"></a>
+    </div>
+    <div class="index-content home">
+        <div class="section">
+            <ul class="artical-cate">
+                <li class="on"><a href="/"><span>主页</span></a></li>
+                <li style="text-align:center">
+                    <a href="http://yxuey.github.io"><span>博客</span></a>
+                </li>
+                <li style="text-align:right">
+                    <a href="http://about.me/yuxueying"><span>关于</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="cate-bar">
+                <span id="cateBar" style="left: 0px; width: 47px; overflow: hidden;"></span>
+            </div>
+           	<h1>嗨！我正尝试学习做一些简单的网页<br/>想要进一步了解详细情况？点击左侧的头像吧~</h1>
+            <br/>
+            <br/>
+            <h2>网页列表：</h2>
+            <ol class="website-list">
+                <li><a href="/">Homepage</a><h5>(主要用html,css,javascript实现。还用了别人写好的jquery来实现动态效果)</h5></li>
+                <li><a href="">第二个网页</a><h5>制作中。。</h5></li>
+                <li><a href="">待续</a></li>
+                <li><a href="">待续</a></li>
+                。
+                。
+            </ol>
+        </div>
+        <div class="aside"></div>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            function animateBar($item,noAni){
+                var spanLeft = $item.find('span').offset().left;
+                var conLeft = $item.parent().offset().left;
+                var left = spanLeft - conLeft;
+                var width = $item.find('span').width() + 8;
+
+                if(noAni){
+                    $('#cateBar').css({left:left,width:width})
+                }else{
+                    $('#cateBar').stop().animate({left:left,width:width},300)
+                }
+            }
+
+            var waitForFinalEvent = (function () {
+                var timers = {};
+                return function (callback, ms, uniqueId) {
+                    if (!uniqueId) {
+                        uniqueId = "Don't call this twice without a uniqueId";
+                    }
+                    if (timers[uniqueId]) {
+                        clearTimeout (timers[uniqueId]);
+                    }
+                    timers[uniqueId] = setTimeout(callback, ms);
+                };
+            })();
+
+            $('.artical-cate li').mouseenter(function(){
+                animateBar($(this));
+            }).mouseleave(function(){
+                animateBar($('.artical-cate .on'));
+            });
+
+            $(window).resize(function(e){
+                waitForFinalEvent(function(){
+                    animateBar($('.artical-cate .on'));
+                })
+            })
+            animateBar($('.artical-cate .on'),true);
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $('.home-follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home-contact').is(':visible')){
+                    $('.home-contact').slideUp(100);
+                }else{
+                    $('.home-contact').slideDown(100);
+                }
+            });
+        })
+    </script>
+</body>
+</html>
