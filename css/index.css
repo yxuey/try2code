@@ -15,8 +15,8 @@ h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
 body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;}
 a {color:rgb(62,188,202);text-decoration:none;outline:none;font-size: 18px}
 a:hover {text-decoration:underline}
-/*
-a:visited {color: rgb(252,157,154)} 没达到预期效果。该变色的没变，不该变的却变了。。*/
+
+a:visited {color: rgb(252,157,154)} /*没达到预期效果。该变色的没变，不该变的却变了。。*/
 
 h1 {margin-left:50px;margin-top:0px;font-size:25px;font-weight:bold;margin-bottom:25px;color:rgb(250,227,113)}
 h2 {margin-left:50px;margin-top:0px;font-size:22px;font-weight:bold;margin-bottom:25px;color:#C4C4C4}
