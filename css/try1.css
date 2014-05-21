@@ -1,0 +1,36 @@
+body{
+  font-size:12px;
+  font-family: Arial;
+}
+ 
+.container {
+    width: 85%;
+    margin:0 auto;
+    background: #f2f2f2;
+}
+ 
+figure img {
+    padding-left: 10px;
+}
+ 
+h1 {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    color: #707070;
+    padding: 10px;
+    font-size:14px;
+}
+ 
+article {
+    background: #505050;
+    color: #f2f2f2;
+    padding: 10px;
+}
+ 
+footer{
+  width: 85%;
+  margin:0 auto;
+}
+ 
+section{
+  padding: 20px 0;
+}
